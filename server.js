@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+app.use(express.static('public'));
+
 app.get('/pets', function (req, res, next) {
   // gets ALL the pets
   res.send('Here are all the pets');
